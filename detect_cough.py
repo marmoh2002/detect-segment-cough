@@ -4,8 +4,8 @@
 
 import os
 import sys
-sys.path.append(os.path.abspath('./src'))
-sys.path.append(os.path.abspath('./src/cough_detection'))
+sys.path.append(os.path.abspath('../src'))
+sys.path.append(os.path.abspath('../src/cough_detection'))
 from src.feature_class import features
 from src.DSP import classify_cough
 from scipy.io import wavfile
