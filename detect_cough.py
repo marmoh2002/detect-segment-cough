@@ -39,10 +39,10 @@ def main(input_file):
     model = xgb.Booster()
     model.load_model(model_path)
     # Load the scaler
-    scaler_path = os.path.join(script_dir, 'models', 'cough_classification_scaler.pkl')
-    with open(scaler_path, 'rb') as f:
-        scaler = pickle.load(f)
-        
+    # scaler_path = os.path.join(script_dir, 'models', 'cough_classification_scaler.pkl')
+    # with open(scaler_path, 'rb') as f:
+    #     scaler = pickle.load(f)
+    scaler = pickle.load(open(os.path.join(script_dir, '/models','cough_classification_scaler'), 'rb'))  
     fs, x = wavfile.read(input_file)
     prob = classify_cough(x, fs, model, scaler)
     print(f"{input_file} has probability of cough: {prob}")
