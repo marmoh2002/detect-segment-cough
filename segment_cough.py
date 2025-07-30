@@ -6,6 +6,7 @@ import librosa
 import os
 import sys
 sys.path.append('.../src/')
+sys.path.append(os.path.abspath('.../src/cough_detection'))
 from segmentation import segment_cough
 import soundfile as sf
 import argparse
