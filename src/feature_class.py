@@ -5,7 +5,7 @@ from scipy.io import wavfile
 from scipy.signal import butter,filtfilt
 from scipy.stats import kurtosis
 import scipy.signal as signal
-from scipy.integrate import simps
+from scipy.integrate import simpson
 
 # Class that contains the feature computation functions 
 
