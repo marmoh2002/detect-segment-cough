@@ -34,8 +34,7 @@ def main(input_file):
     script_dir = os.path.dirname(os.path.abspath(__file__))
     # model = pickle.load(open(os.path.join(script_dir, 'models', 'cough_classifier'),
     #     'rb'))
-    # scaler = pickle.load(open(os.path.join(script_dir, '/models',
-        'cough_classification_scaler'), 'rb'))
+    # scaler = pickle.load(open(os.path.join(script_dir, '/models','cough_classification_scaler'), 'rb'))
     model_path = os.path.join(script_dir, 'models', 'cough_classifier.json')  # or .ubj or .bin
     model = xgb.Booster()
     model.load_model(model_path)
