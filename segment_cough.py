@@ -5,7 +5,7 @@
 import librosa
 import os
 import sys
-sys.path.append('.../src')
+sys.path.append('.../src/')
 from segmentation import segment_cough
 import soundfile as sf
 import argparse
