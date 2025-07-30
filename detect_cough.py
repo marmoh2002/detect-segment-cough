@@ -20,6 +20,9 @@ import argparse
 
 
 def main(input_file):
+    print("Current working directory:", os.getcwd())
+    print("Script location:", os.path.abspath(__file__))
+    print("Script directory:", os.path.dirname(os.path.abspath(__file__)))
     """
     Detect cough in a given audio file
     Inputs:
