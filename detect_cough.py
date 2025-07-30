@@ -32,12 +32,12 @@ def main(input_file):
     """
     # data_folder = './sample_recordings'
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    model = pickle.load(open(os.path.join(script_dir, 'models', 'cough_classifier'),
-        'rb'))
+    # model = pickle.load(open(os.path.join(script_dir, 'models', 'cough_classifier'),
+    #     'rb'))
     scaler = pickle.load(open(os.path.join(script_dir, 'models','cough_classification_scaler'), 'rb'))
-    # model_path = os.path.join(script_dir, 'models', 'cough_classifier.json')  # or .ubj or .bin
-    # model = xgb.Booster()
-    # model.load_model(model_path)
+    model_path = os.path.join(script_dir, 'models', 'cough_classifier.json')  # or .ubj or .bin
+    model = xgb.Booster()
+    model.load_model(model_path)
     # Load the scaler
     # scaler_path = os.path.join(script_dir, 'models', 'cough_classification_scaler.pkl')
     # with open(scaler_path, 'rb') as f:
