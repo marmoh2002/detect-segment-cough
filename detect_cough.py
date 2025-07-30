@@ -31,9 +31,10 @@ def main(input_file):
         result: (float) probability that a given file is a cough
     """
     # data_folder = './sample_recordings'
-    model = pickle.load(open(os.path.join('../models', 'cough_classifier'),
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    model = pickle.load(open(os.path.join(script_dir, '/models', 'cough_classifier'),
         'rb'))
-    scaler = pickle.load(open(os.path.join('../models',
+    scaler = pickle.load(open(os.path.join(script_dir, '/models',
         'cough_classification_scaler'), 'rb'))
 
     fs, x = wavfile.read(input_file)
