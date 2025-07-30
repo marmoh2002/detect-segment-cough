@@ -10,7 +10,7 @@ sys.path.append(os.path.abspath('./src/'))
 sys.path.append(os.path.abspath('./models/'))
 sys.path.append('./models/')
 from src.feature_class import features
-from models import cough_classifier, cough_classification_scaler
+# from models import cough_classifier, cough_classification_scaler
 from src.DSP import classify_cough
 from scipy.io import wavfile
 import pickle
