@@ -15,6 +15,9 @@ def main(input_file, dir_output='./', fs_out=16000):
     print(f"Segmenting cough from {input_file} to {dir_output}")
     x, fs = librosa.load(input_file, sr=fs_out)
     cough_segments, cough_mask = segment_cough(x, fs, cough_padding=0)
+    if not os.path.exists(dir_output):
+        os.makedirs(dir_output)
+    print(f"Found {len(cough_segments)} cough segments")
     for i in range(0, len(cough_segments)):
         sf.write(dir_output 
                     + os.path.basename(input_file).split('.')[0] 
