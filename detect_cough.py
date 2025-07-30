@@ -32,7 +32,7 @@ def main(input_file):
     """
     # data_folder = './sample_recordings'
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    model = pickle.load(open(os.path.join(script_dir, '/models', 'cough_classifier'),
+    model = pickle.load(open(os.path.join(script_dir, 'models', 'cough_classifier'),
         'rb'))
     scaler = pickle.load(open(os.path.join(script_dir, '/models',
         'cough_classification_scaler'), 'rb'))
